@@ -1,0 +1,10 @@
+.app {
+  background: transparent;
+  color: var(--text-primary);
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+}

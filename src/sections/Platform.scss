@@ -1,0 +1,47 @@
+.platform__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.platform__card {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  background: linear-gradient(180deg, rgba(17, 24, 33, 0.95), rgba(10, 15, 20, 0.9));
+  transition: border var(--anim-micro), transform var(--anim-micro);
+
+  .heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: var(--spacing-sm);
+  }
+
+  h4 {
+    font-size: var(--font-size-xl);
+  }
+
+  .chip {
+    padding: 6px 10px;
+    border-radius: var(--radii-pill);
+    background: rgba(0, 136, 255, 0.12);
+    color: var(--brand-blue100);
+    font-size: var(--font-size-xs);
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+  }
+
+  &:hover {
+    border-color: rgba(0, 136, 255, 0.4);
+    transform: translateY(-4px);
+  }
+}
+
+.platform__agents {
+  margin-top: var(--spacing-section);
+}

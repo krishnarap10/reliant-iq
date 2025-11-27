@@ -1,0 +1,21 @@
+.why__list {
+  display: grid;
+  gap: var(--spacing-md);
+}
+
+.why__item {
+  padding: var(--spacing-md);
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-md);
+  border: 1px solid rgba(0, 136, 255, 0.2);
+  background: linear-gradient(180deg, rgba(17, 24, 33, 0.95), rgba(10, 15, 20, 0.9));
+}
+
+.why .dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: var(--brand-blue500);
+  box-shadow: 0 0 12px rgba(0, 136, 255, 0.55);
+}

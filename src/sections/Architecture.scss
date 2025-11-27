@@ -1,0 +1,23 @@
+.architecture .flows {
+  margin-top: var(--spacing-xl);
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.flow {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(0, 136, 255, 0.18);
+  background: linear-gradient(170deg, rgba(20, 28, 38, 0.96), rgba(10, 15, 20, 0.9));
+
+  h4 {
+    margin-bottom: var(--spacing-sm);
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+  }
+}

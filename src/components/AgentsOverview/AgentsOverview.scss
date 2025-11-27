@@ -1,0 +1,39 @@
+.agents-overview {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.agent {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(0, 136, 255, 0.18);
+  background: linear-gradient(180deg, rgba(17, 24, 33, 0.96), rgba(10, 15, 20, 0.9));
+  transition: transform var(--anim-micro), border var(--anim-micro);
+
+  &:hover {
+    transform: translateY(-4px);
+    border-color: rgba(0, 200, 231, 0.4);
+  }
+
+  .badge {
+    display: inline-flex;
+    padding: 6px 12px;
+    border-radius: var(--radii-pill);
+    background: rgba(0, 136, 255, 0.12);
+    color: var(--brand-blue100);
+    font-size: var(--font-size-xs);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  h4 {
+    font-size: var(--font-size-xl);
+    margin-bottom: var(--spacing-sm);
+  }
+
+  ul {
+    list-style: none;
+    display: grid;
+    gap: var(--spacing-sm);
+    color: var(--text-secondary);
+  }
+}

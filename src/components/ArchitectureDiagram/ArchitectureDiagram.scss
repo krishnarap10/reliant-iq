@@ -1,0 +1,56 @@
+.architecture-diagram {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(0, 136, 255, 0.25);
+  background: linear-gradient(180deg, rgba(17, 24, 33, 0.96), rgba(10, 15, 20, 0.9));
+}
+
+.diagram__header {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: var(--spacing-md);
+  margin-bottom: var(--spacing-md);
+
+  p {
+    color: var(--text-muted);
+  }
+}
+
+svg {
+  width: 100%;
+  height: auto;
+  border-radius: var(--radii-lg);
+  background: radial-gradient(circle at 30% 20%, rgba(0, 200, 231, 0.08), transparent 30%),
+    radial-gradient(circle at 80% 0%, rgba(0, 136, 255, 0.08), transparent 28%),
+    rgba(8, 12, 18, 0.9);
+}
+
+.diagram__legend {
+  display: grid;
+  gap: var(--spacing-sm);
+  margin-top: var(--spacing-md);
+
+  div {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: var(--text-secondary);
+    font-size: var(--font-size-sm);
+  }
+}
+
+.dot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  &.dot-ai {
+    background: var(--brand-cyan500);
+    box-shadow: 0 0 12px rgba(0, 200, 231, 0.6);
+  }
+
+  &.dot-sec {
+    background: var(--brand-blue500);
+    box-shadow: 0 0 12px rgba(0, 136, 255, 0.6);
+  }
+}

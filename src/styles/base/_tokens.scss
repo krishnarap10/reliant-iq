@@ -1,0 +1,199 @@
+$brand-name: "ReliantIQ";
+$brand-tagline: "Where Reliability Meets Intelligence.";
+$theme-mode: "dark";
+
+$colors: (
+  background: (
+    primary: #05080D,
+    secondary: #0A0F14,
+    tertiary: #0F1620
+  ),
+  surface: (
+    card: #111821,
+    elevated: #141C26,
+    overlay: rgba(10, 15, 20, 0.8)
+  ),
+  text: (
+    primary: #FFFFFF,
+    secondary: #D6DEE8,
+    muted: #8A96A8
+  ),
+  brand: (
+    blue50: #E6F2FF,
+    blue100: #B0D9FF,
+    blue300: #4FB4FF,
+    blue500: #0088FF,
+    blue700: #005BB5,
+    cyan200: #5EF5FF,
+    cyan500: #00C8E7
+  ),
+  status: (
+    success: #16A34A,
+    warning: #EAB308,
+    error: #DC2626,
+    info: #0EA5E9
+  ),
+  glow: (
+    ai: rgba(0, 180, 255, 0.25),
+    primary: rgba(0, 136, 255, 0.35)
+  )
+);
+
+$typography: (
+  fontFamily: (
+    primary: "Spline Sans, Inter, sans-serif"
+  ),
+  sizes: (
+    xs: 12px,
+    sm: 14px,
+    base: 16px,
+    lg: 18px,
+    xl: 20px,
+    "2xl": 26px,
+    "3xl": 32px,
+    "4xl": 42px,
+    "5xl": 56px
+  ),
+  weights: (
+    regular: 400,
+    medium: 500,
+    semibold: 600,
+    bold: 700
+  )
+);
+
+$spacing: (
+  xs: 4px,
+  sm: 8px,
+  md: 12px,
+  lg: 16px,
+  xl: 24px,
+  "2xl": 32px,
+  section: 96px
+);
+
+$radii: (
+  sm: 4px,
+  md: 8px,
+  lg: 12px,
+  xl: 20px,
+  pill: 999px
+);
+
+$shadows: (
+  soft: 0px 6px 14px rgba(0, 0, 0, 0.35),
+  medium: 0px 10px 25px rgba(0, 0, 0, 0.5),
+  glow: 0px 0px 24px rgba(0, 136, 255, 0.45)
+);
+
+$animation: (
+  micro: 150ms ease,
+  standard: 300ms ease,
+  pulse: 2.8s ease-in-out infinite,
+  neuralFlow: 6s linear infinite
+);
+
+// Component tokens
+$components: (
+  button: (
+    primary: (
+      background: var(--brand-blue500),
+      text: #FFFFFF,
+      radius: var(--radii-md),
+      shadow: var(--shadows-soft)
+    ),
+    secondary: (
+      background: transparent,
+      text: var(--text-primary),
+      border: 1px solid var(--brand-blue300)
+    )
+  ),
+  card: (
+    background: var(--surface-card),
+    radius: var(--radii-lg),
+    shadow: var(--shadows-soft),
+    padding: var(--spacing-lg)
+  ),
+  aiCard: (
+    glow: var(--shadows-glow),
+    border: 1px solid var(--brand-blue300)
+  )
+);
+
+// Helpers
+@function token($map, $key...) {
+  $value: $map;
+  @each $k in $key {
+    $value: map-get($value, $k);
+  }
+  @return $value;
+}
+
+:root {
+  // Colors
+  --background-primary: #{token($colors, background, primary)};
+  --background-secondary: #{token($colors, background, secondary)};
+  --background-tertiary: #{token($colors, background, tertiary)};
+  --surface-card: #{token($colors, surface, card)};
+  --surface-elevated: #{token($colors, surface, elevated)};
+  --surface-overlay: #{token($colors, surface, overlay)};
+  --text-primary: #{token($colors, text, primary)};
+  --text-secondary: #{token($colors, text, secondary)};
+  --text-muted: #{token($colors, text, muted)};
+  --brand-blue50: #{token($colors, brand, blue50)};
+  --brand-blue100: #{token($colors, brand, blue100)};
+  --brand-blue300: #{token($colors, brand, blue300)};
+  --brand-blue500: #{token($colors, brand, blue500)};
+  --brand-blue700: #{token($colors, brand, blue700)};
+  --brand-cyan200: #{token($colors, brand, cyan200)};
+  --brand-cyan500: #{token($colors, brand, cyan500)};
+  --status-success: #{token($colors, status, success)};
+  --status-warning: #{token($colors, status, warning)};
+  --status-error: #{token($colors, status, error)};
+  --status-info: #{token($colors, status, info)};
+  --glow-ai: #{token($colors, glow, ai)};
+  --glow-primary: #{token($colors, glow, primary)};
+
+  // Typography
+  --font-family-primary: #{token($typography, fontFamily, primary)};
+  --font-size-xs: #{token($typography, sizes, xs)};
+  --font-size-sm: #{token($typography, sizes, sm)};
+  --font-size-base: #{token($typography, sizes, base)};
+  --font-size-lg: #{token($typography, sizes, lg)};
+  --font-size-xl: #{token($typography, sizes, xl)};
+  --font-size-2xl: #{token($typography, sizes, "2xl")};
+  --font-size-3xl: #{token($typography, sizes, "3xl")};
+  --font-size-4xl: #{token($typography, sizes, "4xl")};
+  --font-size-5xl: #{token($typography, sizes, "5xl")};
+  --font-weight-regular: #{token($typography, weights, regular)};
+  --font-weight-medium: #{token($typography, weights, medium)};
+  --font-weight-semibold: #{token($typography, weights, semibold)};
+  --font-weight-bold: #{token($typography, weights, bold)};
+
+  // Spacing
+  --spacing-xs: #{token($spacing, xs)};
+  --spacing-sm: #{token($spacing, sm)};
+  --spacing-md: #{token($spacing, md)};
+  --spacing-lg: #{token($spacing, lg)};
+  --spacing-xl: #{token($spacing, xl)};
+  --spacing-2xl: #{token($spacing, "2xl")};
+  --spacing-section: #{token($spacing, section)};
+
+  // Radii
+  --radii-sm: #{token($radii, sm)};
+  --radii-md: #{token($radii, md)};
+  --radii-lg: #{token($radii, lg)};
+  --radii-xl: #{token($radii, xl)};
+  --radii-pill: #{token($radii, pill)};
+
+  // Shadows
+  --shadows-soft: #{token($shadows, soft)};
+  --shadows-medium: #{token($shadows, medium)};
+  --shadows-glow: #{token($shadows, glow)};
+
+  // Animation
+  --anim-micro: #{token($animation, micro)};
+  --anim-standard: #{token($animation, standard)};
+  --anim-pulse: #{token($animation, pulse)};
+  --anim-neural-flow: #{token($animation, neuralFlow)};
+}

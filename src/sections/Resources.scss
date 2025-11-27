@@ -1,0 +1,27 @@
+.resources__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: var(--spacing-lg);
+}
+
+.resource {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: linear-gradient(180deg, rgba(17, 24, 33, 0.94), rgba(10, 15, 20, 0.9));
+  position: relative;
+
+  .spark {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+    background: var(--brand-cyan500);
+    box-shadow: 0 0 16px rgba(0, 200, 231, 0.8);
+  }
+
+  p {
+    color: var(--text-secondary);
+  }
+}

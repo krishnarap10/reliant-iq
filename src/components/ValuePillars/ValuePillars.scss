@@ -1,0 +1,35 @@
+.value-pillars {
+  display: grid;
+  gap: var(--spacing-lg);
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+}
+
+.pillar {
+  padding: var(--spacing-lg);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  position: relative;
+  overflow: hidden;
+  transition: border var(--anim-micro), transform var(--anim-micro);
+
+  .node {
+    position: absolute;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--brand-cyan500);
+    box-shadow: 0 0 12px rgba(0, 200, 231, 0.7);
+    top: var(--spacing-md);
+    right: var(--spacing-md);
+  }
+
+  p {
+    color: var(--text-secondary);
+    line-height: 1.5;
+  }
+
+  &:hover {
+    border-color: rgba(0, 136, 255, 0.5);
+    transform: translateY(-4px);
+    box-shadow: 0 12px 28px rgba(0, 136, 255, 0.12);
+  }
+}
