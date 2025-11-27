@@ -7,3 +7,4 @@ Purpose: quick reference of meaningful changes made in this repo. Update this fi
 - Implemented all site sections and components using official ReliantIQ content (Hero with AI RCA card, Platform, Solutions, Architecture SVG, Why, Resources, Contact, Navbar/Footer).
 - Added grounded chatbot for product/site Q&A (`src/components/ChatBot`).
 - Removed unused default Vite styles; refreshed README with project-specific instructions.
+- Tagged current stable state as `v0.1.0` for rollback safety.
